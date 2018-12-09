@@ -1,0 +1,6 @@
+framework module Pods_CoffeeCounter {
+  umbrella header "Pods-CoffeeCounter-umbrella.h"
+
+  export *
+  module * { export * }
+}

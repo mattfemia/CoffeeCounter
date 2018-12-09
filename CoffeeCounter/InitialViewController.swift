@@ -1,11 +1,3 @@
-//
-//  InitialViewController.swift
-//  CoffeeCounter
-//
-//  Created by Matthew Femia on 12/8/18.
-//  Copyright © 2018 Matthew Femia. All rights reserved.
-//
-
 import UIKit
 
 class InitialViewController: UIViewController {

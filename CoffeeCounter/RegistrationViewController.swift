@@ -1,12 +1,6 @@
-//
-//  RegistrationViewController.swift
-//  CoffeeCounter
-//
-//  Created by Matthew Femia on 12/8/18.
-//  Copyright © 2018 Matthew Femia. All rights reserved.
-//
-
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class RegistrationViewController: UIViewController {
 
@@ -28,7 +22,32 @@ class RegistrationViewController: UIViewController {
     
     
     @IBAction func onSignUpClick(_ sender: Any) {
-        performSegue(withIdentifier: "registrationToMain", sender: self)
+        guard let email = emailTextField.text,
+            email != "",
+            
+        let password = passwordTextField.text,
+            password != ""
+            
+        else {
+            
+            AlertController.showAlert(self, title: "Alert", message: "Please fill out all fields")
+                
+                return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password)
+        {
+            (user, error) in
+            
+            if (user != nil)
+            {
+                self.performSegue(withIdentifier: "registrationToMain", sender: self)
+            }
+            if (error != nil)
+            {
+                self.performSegue(withIdentifier: "registrationToLogin", sender: self)
+            }
+        }
     }
     
     @IBAction func onLoginClick(_ sender: Any) {
