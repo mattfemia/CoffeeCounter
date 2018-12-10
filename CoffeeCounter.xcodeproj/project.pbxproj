@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		025BFDD5BBD564EDAD5D2914 /* Pods_CoffeeCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CE879060799DCE83F24E89 /* Pods_CoffeeCounter.framework */; };
-		B93F93B421BE0856002659C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B93F93B321BE0856002659C0 /* GoogleService-Info.plist */; };
 		B9E4DFD021BBA3A10064D4EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E4DFCF21BBA3A10064D4EE /* AppDelegate.swift */; };
 		B9E4DFD221BBA3A10064D4EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E4DFD121BBA3A10064D4EE /* ViewController.swift */; };
 		B9E4DFD521BBA3A10064D4EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E4DFD321BBA3A10064D4EE /* Main.storyboard */; };
 		B9E4DFD721BBA3AA0064D4EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E4DFD621BBA3AA0064D4EE /* Assets.xcassets */; };
 		B9E4DFDA21BBA3AA0064D4EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E4DFD821BBA3AA0064D4EE /* LaunchScreen.storyboard */; };
 		B9E4DFE221BBA4A80064D4EE /* initialCC.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9E4DFE121BBA4A80064D4EE /* initialCC.jpg */; };
+		C047A0BF21BE325C00A48461 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C047A0BE21BE325C00A48461 /* GoogleService-Info.plist */; };
 		C057C60821BCB12100BE2065 /* NYC.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C057C60721BCB12100BE2065 /* NYC.jpg */; };
 		C057C60B21BCB23400BE2065 /* NYC2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C057C60A21BCB23400BE2065 /* NYC2.jpg */; };
 		C057C60F21BCB35300BE2065 /* NYC3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C057C60C21BCB35200BE2065 /* NYC3.jpg */; };
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		20CE879060799DCE83F24E89 /* Pods_CoffeeCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D393134F292ACF100BF55E /* Pods-CoffeeCounter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCounter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeCounter/Pods-CoffeeCounter.debug.xcconfig"; sourceTree = "<group>"; };
-		B93F93B321BE0856002659C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B9E4DFCC21BBA3A10064D4EE /* CoffeeCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E4DFCF21BBA3A10064D4EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9E4DFD121BBA3A10064D4EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		B9E4DFDB21BBA3AA0064D4EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9E4DFE121BBA4A80064D4EE /* initialCC.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = initialCC.jpg; path = "CoffeeCounter/Supporting Files/initialCC.jpg"; sourceTree = SOURCE_ROOT; };
 		BDDBB6E60EF9020D691E7E7D /* Pods-CoffeeCounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCounter.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeCounter/Pods-CoffeeCounter.release.xcconfig"; sourceTree = "<group>"; };
+		C047A0BE21BE325C00A48461 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C057C60721BCB12100BE2065 /* NYC.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = NYC.jpg; path = "CoffeeCounter/Supporting Files/NYC.jpg"; sourceTree = SOURCE_ROOT; };
 		C057C60A21BCB23400BE2065 /* NYC2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = NYC2.jpg; path = Images/NYC2.jpg; sourceTree = SOURCE_ROOT; };
 		C057C60C21BCB35200BE2065 /* NYC3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = NYC3.jpg; path = Images/NYC3.jpg; sourceTree = SOURCE_ROOT; };
@@ -115,8 +115,8 @@
 		B9E4DFCE21BBA3A10064D4EE /* CoffeeCounter */ = {
 			isa = PBXGroup;
 			children = (
-				B93F93B321BE0856002659C0 /* GoogleService-Info.plist */,
 				C0F7E6B321BCF1030005354E /* CoffeeCounter.entitlements */,
+				C047A0BE21BE325C00A48461 /* GoogleService-Info.plist */,
 				C057C61221BCB65600BE2065 /* InitialViewController.swift */,
 				C057C61421BCB67100BE2065 /* RegistrationViewController.swift */,
 				C0F7E6AF21BCE35F0005354E /* AlertController.swift */,
@@ -230,7 +230,7 @@
 				C09D615E21BC91C100F419C3 /* login_button_icon.png in Resources */,
 				C09D616221BC987D00F419C3 /* password_icon.png in Resources */,
 				C09D616821BC993E00F419C3 /* icons8-cafe-50.png in Resources */,
-				B93F93B421BE0856002659C0 /* GoogleService-Info.plist in Resources */,
+				C047A0BF21BE325C00A48461 /* GoogleService-Info.plist in Resources */,
 				C09D616621BC98E100F419C3 /* coffeeClear_icon.png in Resources */,
 				B9E4DFD721BBA3AA0064D4EE /* Assets.xcassets in Resources */,
 				B9E4DFD521BBA3A10064D4EE /* Main.storyboard in Resources */,
@@ -294,6 +294,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoffeeCounter/Pods-CoffeeCounter-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -302,6 +303,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

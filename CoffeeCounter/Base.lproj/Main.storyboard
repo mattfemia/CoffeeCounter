@@ -436,6 +436,7 @@
                         <outlet property="usernameTextField" destination="vl0-1N-M99" id="N4r-CX-8XW"/>
                         <segue destination="RBB-ur-Mjz" kind="presentation" identifier="registrationToMain" id="wQ6-YQ-Qf2"/>
                         <segue destination="fdX-FY-Is2" kind="presentation" identifier="registrationToLogin" id="YCn-ss-Cbt"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="registrationToInitial" id="jxz-Qv-Dxa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YS7-zV-96b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -454,5 +455,6 @@
         <segue reference="RHA-4Y-Ro6"/>
         <segue reference="wQ6-YQ-Qf2"/>
         <segue reference="YCn-ss-Cbt"/>
+        <segue reference="jxz-Qv-Dxa"/>
     </inferredMetricsTieBreakers>
 </document>
