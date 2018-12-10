@@ -16,6 +16,12 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // Make a counter
+        // TODO
+    
+    // Adjust counter to the amount of coffees the user has -- read and write to the Firebase Database
+        // TODO
+    
     @IBAction func onSignOutClick(_ sender: Any) {
         performSegue(withIdentifier: "mainToInitial", sender: self)
     }
