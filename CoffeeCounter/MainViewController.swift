@@ -38,6 +38,9 @@ class MainViewController: UIViewController {
         
         performSegue(withIdentifier: "mainToInitial", sender: self)
     }
-    
-
+    /* MAKE USER PROFILE
+        // Ranking for how many coffees per day? week? ever?
+        // Ability to add friends
+        // Capability of sending friends your free coffee with message attached
+ 
 }

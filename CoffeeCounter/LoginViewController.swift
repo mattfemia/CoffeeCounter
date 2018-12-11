@@ -18,13 +18,10 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
     @IBOutlet weak var emailTextField: UITextField!
     
     
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     
     
     @IBAction func onLoginClick(_ sender: Any) {
@@ -37,8 +34,6 @@ class LoginViewController: UIViewController {
                 print("Error logging in: \(error!.localizedDescription)")
             }
         }
-        
-        
         
         performSegue(withIdentifier: "loginToMain", sender: self)
     }

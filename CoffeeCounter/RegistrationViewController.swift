@@ -1,3 +1,11 @@
+//
+//  LoginViewController.swift
+//  CoffeeCounter
+//
+//  Created by Matthew Femia on 12/8/18.
+//  Copyright © 2018 Matthew Femia. All rights reserved.
+//
+
 import UIKit
 import Firebase
 import FirebaseAuth
@@ -37,8 +45,9 @@ class RegistrationViewController: UIViewController {
             // Send alert to user if all fields aren't filled out
             AlertController.showAlert(self, title: "Input Error", message: "Please fill out all fields")
         
-        // Check to make sure the users passwords match
+        
         }
+        // Check to make sure the users passwords match
         if (passwordTextField.text)! != (confirmTextField.text)! {
             
             AlertController.showAlert(self, title: "Password Error", message: "Passwords do not match.")
@@ -53,37 +62,45 @@ class RegistrationViewController: UIViewController {
         if let email = emailTextField.text,
             let password = passwordTextField.text,
             let username = usernameTextField.text,
-            let name = nameTextField.text
-            {
-            /* Create user authorization
-             Syntax from: https://firebase.google.com/docs/auth/ios/start?authuser=0 */
-                Auth.auth().createUser(withEmail: email, password: password) {
-                (user, error) in
-            
-                // Send the user to the home screen if a profile is created
-                if (user != nil) {
-                    
-                    let userAssignment = Auth.auth().currentUser?.createProfileChangeRequest()
-                    userAssignment?.displayName = username
-                    userAssignment?.commitChanges { error in
-                        if error == nil {
-                            print("Username has been successfully assigned!")
-                            
+            let name = nameTextField.text {
+                /* Create user authorization */
+                // Syntax from: https://firebase.google.com/docs/auth/ios/start?authuser=0
+                    Auth.auth().createUser(withEmail: email, password: password) {
+                    (user, error) in
+                    if (user != nil) {
+                        
+                        // Re-assign user as the username they provide
+                        let userAssignment = Auth.auth().currentUser?.createProfileChangeRequest()
+                        userAssignment?.displayName = username
+                        userAssignment?.commitChanges { error in
+                            if error == nil {
+                                print("Username has been successfully assigned!")
+                                }
                             }
-                        }
-                    
-                    let ref = Database.database().reference()
-                    /* Use this syntax to set the user as the parent to a branch of the database
-                        specific to the user https://firebase.google.com/docs/database/ios/read-and-write?authuser=0 */
-                    ref.child("/Users").setValue(username);
-                    
-                    self.performSegue(withIdentifier: "registrationToMain", sender: self)
-                }
-                // if there is an error, send error and re-route back to the startup screen
-                if (error != nil) {
-                    AlertController.showAlert(self, title: "Error", message: "Error creating user, please try again later")
-                    
-                    self.performSegue(withIdentifier: "registrationToInitial", sender: self)
+                        /* Create Database for all the user input
+                        Technical syntax from: https://firebase.google.com/docs/database/ios/read-and-write?authuser=0 */
+                        // Initialize database 'db'
+                        let db = Database.database().reference()
+                        
+                        // Populate data specific to each user
+                        db.child("Users").child(username).setValue(["email": email, "name": name, "password": password])
+                            /* STORE ENCRYPTED PASSWORD */
+                                //TODO
+                        
+                            /* STORE uid */
+                                // TODO
+     
+                            /* CREATE ERROR CHECKING FOR DB */
+                                // TODO
+                        
+                        // Re-route user to Main Screen if User Auth and Database are successful
+                        self.performSegue(withIdentifier: "registrationToMain", sender: self)
+                    }
+                    // if there is an error, display error message and re-route back to the startup screen
+                    if (error != nil) {
+                        AlertController.showAlert(self, title: "Error", message: "Error creating user, please try again later")
+                        
+                        self.performSegue(withIdentifier: "registrationToInitial", sender: self)
                     }
                 }
             }
