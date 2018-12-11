@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -17,7 +19,8 @@ class LoginViewController: UIViewController {
     }
     
 
-    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    
     
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -25,10 +28,23 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func onLoginClick(_ sender: Any) {
+        guard let email = emailTextField.text else {return}
+        guard let password = passwordTextField.text else {return}
+        
+        Auth.auth().signIn(withEmail: email, password: password) {user, error in
+            if error == nil && user != nil {
+            } else {
+                print("Error logging in: \(error!.localizedDescription)")
+            }
+        }
+        
+        
+        
         performSegue(withIdentifier: "loginToMain", sender: self)
     }
     
     @IBAction func onSignUpClick(_ sender: Any) {
+        
         performSegue(withIdentifier: "loginToRegistration", sender: self)
     }
     

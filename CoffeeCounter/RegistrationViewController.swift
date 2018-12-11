@@ -62,6 +62,16 @@ class RegistrationViewController: UIViewController {
             
                 // Send the user to the home screen if a profile is created
                 if (user != nil) {
+                    
+                    let userAssignment = Auth.auth().currentUser?.createProfileChangeRequest()
+                    userAssignment?.displayName = username
+                    userAssignment?.commitChanges { error in
+                        if error == nil {
+                            print("Username has been successfully assigned!")
+                            
+                            }
+                        }
+                    
                     let ref = Database.database().reference()
                     /* Use this syntax to set the user as the parent to a branch of the database
                         specific to the user https://firebase.google.com/docs/database/ios/read-and-write?authuser=0 */

@@ -108,7 +108,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="      Username" borderStyle="roundedRect" placeholder="Username" clearsOnBeginEditing="YES" minimumFontSize="12" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="XjI-d6-aDE">
+                                        <textField opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="      Email" borderStyle="roundedRect" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="12" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="XjI-d6-aDE">
                                             <rect key="frame" x="40" y="260" width="295" height="30"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -222,8 +222,8 @@
                         <viewLayoutGuide key="safeArea" id="gVK-m6-2Pt"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="XjI-d6-aDE" id="XRy-au-3nJ"/>
                         <outlet property="passwordTextField" destination="bxV-lc-lkb" id="0h1-PJ-KaJ"/>
-                        <outlet property="usernameTextField" destination="XjI-d6-aDE" id="Efy-bX-VUv"/>
                         <segue destination="hAs-iz-w1l" kind="presentation" identifier="loginToRegistration" id="RHA-4Y-Ro6"/>
                         <segue destination="RBB-ur-Mjz" kind="presentation" identifier="loginToMain" id="FSz-8t-Rej"/>
                     </connections>
@@ -453,7 +453,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="RHA-4Y-Ro6"/>
-        <segue reference="wQ6-YQ-Qf2"/>
+        <segue reference="FSz-8t-Rej"/>
         <segue reference="YCn-ss-Cbt"/>
         <segue reference="jxz-Qv-Dxa"/>
     </inferredMetricsTieBreakers>

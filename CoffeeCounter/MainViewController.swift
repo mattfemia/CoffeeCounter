@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class MainViewController: UIViewController {
 
@@ -16,6 +18,14 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let user = Auth.auth().currentUser {
+            self.performSegue(withIdentifier: "loginToInitial", sender: self)
+        }
+    }
+    
     // Make a counter
         // TODO
     
@@ -23,6 +33,9 @@ class MainViewController: UIViewController {
         // TODO
     
     @IBAction func onSignOutClick(_ sender: Any) {
+        try! Auth.auth().signOut()
+        self.dismiss(animated: false, completion: nil)
+        
         performSegue(withIdentifier: "mainToInitial", sender: self)
     }
     
