@@ -291,6 +291,7 @@
                         <viewLayoutGuide key="safeArea" id="rpZ-Gm-58u"/>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="NaX-RD-OqG" id="hLI-DE-qzc"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="mainToInitial" id="DQ9-oZ-8GI"/>
                     </connections>
                 </viewController>
@@ -453,8 +454,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="RHA-4Y-Ro6"/>
-        <segue reference="FSz-8t-Rej"/>
+        <segue reference="wQ6-YQ-Qf2"/>
         <segue reference="YCn-ss-Cbt"/>
-        <segue reference="jxz-Qv-Dxa"/>
+        <segue reference="DQ9-oZ-8GI"/>
     </inferredMetricsTieBreakers>
 </document>
