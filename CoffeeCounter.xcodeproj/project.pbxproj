@@ -30,6 +30,8 @@
 		C09D616421BC987D00F419C3 /* coffeeFilled_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C09D616121BC987D00F419C3 /* coffeeFilled_icon.png */; };
 		C09D616621BC98E100F419C3 /* coffeeClear_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C09D616521BC98E100F419C3 /* coffeeClear_icon.png */; };
 		C09D616821BC993E00F419C3 /* icons8-cafe-50.png in Resources */ = {isa = PBXBuildFile; fileRef = C09D616721BC993D00F419C3 /* icons8-cafe-50.png */; };
+		C0C4E7B921C225150089F114 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C4E7B821C225150089F114 /* MapKit.framework */; };
+		C0C4E7BD21C233370089F114 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C4E7BC21C233370089F114 /* UserViewController.swift */; };
 		C0F7E6B021BCE35F0005354E /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F7E6AF21BCE35F0005354E /* AlertController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		C09D616121BC987D00F419C3 /* coffeeFilled_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coffeeFilled_icon.png; path = "CoffeeCounter/Supporting Files/coffeeFilled_icon.png"; sourceTree = SOURCE_ROOT; };
 		C09D616521BC98E100F419C3 /* coffeeClear_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coffeeClear_icon.png; path = "CoffeeCounter/Supporting Files/coffeeClear_icon.png"; sourceTree = SOURCE_ROOT; };
 		C09D616721BC993D00F419C3 /* icons8-cafe-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-cafe-50.png"; path = "CoffeeCounter/Supporting Files/icons8-cafe-50.png"; sourceTree = SOURCE_ROOT; };
+		C0C4E7B821C225150089F114 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C0C4E7BC21C233370089F114 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		C0F7E6AF21BCE35F0005354E /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		C0F7E6B321BCF1030005354E /* CoffeeCounter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoffeeCounter.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C4E7B921C225150089F114 /* MapKit.framework in Frameworks */,
 				025BFDD5BBD564EDAD5D2914 /* Pods_CoffeeCounter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +85,7 @@
 		3B2CDA0568661B34F8009161 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0C4E7B821C225150089F114 /* MapKit.framework */,
 				20CE879060799DCE83F24E89 /* Pods_CoffeeCounter.framework */,
 			);
 			name = Frameworks;
@@ -129,6 +135,7 @@
 				B9E4DFD821BBA3AA0064D4EE /* LaunchScreen.storyboard */,
 				B9E4DFDB21BBA3AA0064D4EE /* Info.plist */,
 				C057C60921BCB13600BE2065 /* Supporting Files */,
+				C0C4E7BC21C233370089F114 /* UserViewController.swift */,
 			);
 			path = CoffeeCounter;
 			sourceTree = "<group>";
@@ -192,7 +199,7 @@
 								enabled = 1;
 							};
 							com.apple.Maps.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -319,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C057C61921BCB69A00BE2065 /* MainViewController.swift in Sources */,
+				C0C4E7BD21C233370089F114 /* UserViewController.swift in Sources */,
 				C057C61721BCB68000BE2065 /* LoginViewController.swift in Sources */,
 				B9E4DFD221BBA3A10064D4EE /* ViewController.swift in Sources */,
 				B9E4DFD021BBA3A10064D4EE /* AppDelegate.swift in Sources */,

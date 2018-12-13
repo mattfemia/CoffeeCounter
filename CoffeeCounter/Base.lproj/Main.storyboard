@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZfE-1J-cYV">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -299,6 +299,42 @@
             </objects>
             <point key="canvasLocation" x="2076" y="51.724137931034484"/>
         </scene>
+        <!--User View Controller-->
+        <scene sceneID="DKp-Xj-Fky">
+            <objects>
+                <viewController storyboardIdentifier="UserViewControlller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZfE-1J-cYV" customClass="UserViewController" customModule="CoffeeCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SGN-Sb-yAT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0H-y9-kD7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="301"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJk-Hc-sJ3">
+                                <rect key="frame" x="81" y="329" width="213" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.27020615739999998" green="0.4988942992" blue="0.65898635780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Import">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="importProfilePicture:" destination="ZfE-1J-cYV" eventType="touchUpInside" id="5a9-2U-Yyo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JG8-ma-uEE"/>
+                    </view>
+                    <connections>
+                        <outlet property="importPictureButton" destination="DJk-Hc-sJ3" id="Atm-iW-4aQ"/>
+                        <outlet property="profilePicture" destination="f0H-y9-kD7" id="Ayf-36-ziM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPM-79-JyA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3032.8000000000002" y="51.724137931034484"/>
+        </scene>
         <!--Registration View Controller-->
         <scene sceneID="yc2-nJ-Y4y">
             <objects>
@@ -453,9 +489,9 @@
         <image name="password_icon.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RHA-4Y-Ro6"/>
+        <segue reference="LSQ-Uy-Ai4"/>
         <segue reference="wQ6-YQ-Qf2"/>
-        <segue reference="YCn-ss-Cbt"/>
+        <segue reference="3oW-Mi-ySC"/>
         <segue reference="DQ9-oZ-8GI"/>
     </inferredMetricsTieBreakers>
 </document>
