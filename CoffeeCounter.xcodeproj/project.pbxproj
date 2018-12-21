@@ -131,11 +131,11 @@
 				B9E4DFCF21BBA3A10064D4EE /* AppDelegate.swift */,
 				B9E4DFD321BBA3A10064D4EE /* Main.storyboard */,
 				B9E4DFD621BBA3AA0064D4EE /* Assets.xcassets */,
+				C0C4E7BC21C233370089F114 /* UserViewController.swift */,
 				B9E4DFD121BBA3A10064D4EE /* ViewController.swift */,
 				B9E4DFD821BBA3AA0064D4EE /* LaunchScreen.storyboard */,
 				B9E4DFDB21BBA3AA0064D4EE /* Info.plist */,
 				C057C60921BCB13600BE2065 /* Supporting Files */,
-				C0C4E7BC21C233370089F114 /* UserViewController.swift */,
 			);
 			path = CoffeeCounter;
 			sourceTree = "<group>";

@@ -28,6 +28,29 @@ class UserViewController: UIViewController {
         importProf.allowsEditing = true
         importProf.sourceType = .photoLibrary
         importProf.delegate = self
+        guard let image = profilePicture.image else { return }
+        
+        
+        self.uploadImage(image) { url in
+            
+        }
+    }
+    
+    func uploadImage(_ image:UIImage, completion: @escaping((_ url: String)->())) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let storageRef = Storage.storage().reference().child("user/\(uid)")
+        
+        guard let imageData = image.jpegData(compressionQuality: 0.75) else { return }
+        
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpg"
+        
+        storageRef.downloadURL { (url, error) in
+            guard let downloadURL = url else {
+                print("Profile image upload was unsuccessful")
+                return
+            }
+        }
     }
     
     @objc func openImportProf(_ sender:Any) {

@@ -9,6 +9,7 @@ target 'CoffeeCounter' do
   pod 'Firebase/Core'
   pod 'FirebaseAuth'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   pod 'Fabric', '~> 1.9.0'
   pod 'Crashlytics', '~> 3.12.0'
 
